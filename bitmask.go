@@ -21,7 +21,7 @@ func (b BitMask) Get(bit int) bool {
 	if pos > len(b) {
 		return false
 	}
-	return b[bit>>3]&byte(1<<byte(bit&7)) != 0
+	return b[pos]&byte(1<<byte(bit&7)) != 0
 }
 
 // Set will set the given bool at the given position.
@@ -36,4 +36,23 @@ func (b BitMask) Set(bit int, d bool) {
 	} else {
 		b[pos] &^= shift
 	}
+}
+
+// SetIfNot will set the given bool at the given position and return true if
+// the value has changed.
+func (b BitMask) SetIfNot(bit int, d bool) bool {
+	pos := bit >> 3
+	if pos > len(b) {
+		return false
+	}
+	if (b[pos]&byte(1<<byte(bit&7)) != 0) == d {
+		return false
+	}
+	shift := byte(1 << byte(bit&7))
+	if d {
+		b[pos] |= shift
+	} else {
+		b[pos] &^= shift
+	}
+	return true
 }

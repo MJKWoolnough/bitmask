@@ -36,3 +36,11 @@ Get will retrieve the bool stored at given bit position.
 func (b BitMask) Set(bit int, d bool)
 ```
 Set will set the given bool at the given position.
+
+#### func (BitMask) SetIfNot
+
+```go
+func (b BitMask) SetIfNot(bit int, d bool) bool
+```
+SetIfNot will set the given bool at the given position and return true if the
+value has changed.
