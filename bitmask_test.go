@@ -78,7 +78,7 @@ func TestSetIfNot(t *testing.T) {
 	b := New(32)
 	for n, test := range tests {
 		if got := b.SetIfNot(test.pos, test.data); got != test.ret {
-			t.Errorf("test d: expecting %v, got %v", n+1, test.ret, got)
+			t.Errorf("test %d: expecting %v, got %v", n+1, test.ret, got)
 		}
 	}
 }
