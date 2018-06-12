@@ -1,5 +1,5 @@
 // Package bitmask implements a simple bitmask type
-package bitmask
+package bitmask // import "vimagination.zapto.org/bitmask"
 
 // BitMask is the main type. It is completely safe to cast from an existing byte
 // slice or to create a BitMask with make.
