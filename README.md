@@ -1,6 +1,6 @@
 # bitmask
 --
-    import "github.com/MJKWoolnough/bitmask"
+    import "vimagination.zapto.org/bitmask"
 
 Package bitmask implements a simple bitmask type
 
