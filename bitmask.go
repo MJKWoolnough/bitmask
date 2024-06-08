@@ -1,4 +1,4 @@
-// Package bitmask implements a simple bitmask type
+// Package bitmask implements a simple bitmask type.
 package bitmask // import "vimagination.zapto.org/bitmask"
 
 // BitMask is the main type. It is completely safe to cast from an existing byte
@@ -12,6 +12,7 @@ func New(bits int) BitMask {
 	if bits&7 != 0 {
 		numCells++
 	}
+
 	return make(BitMask, numCells)
 }
 
@@ -21,6 +22,7 @@ func (b BitMask) Get(bit int) bool {
 	if pos > len(b) {
 		return false
 	}
+
 	return b[pos]&byte(1<<byte(bit&7)) != 0
 }
 
@@ -30,7 +32,9 @@ func (b BitMask) Set(bit int, d bool) {
 	if pos > len(b) {
 		return
 	}
+
 	shift := byte(1 << byte(bit&7))
+
 	if d {
 		b[pos] |= shift
 	} else {
@@ -45,14 +49,18 @@ func (b BitMask) SetIfNot(bit int, d bool) bool {
 	if pos > len(b) {
 		return false
 	}
+
 	if (b[pos]&byte(1<<byte(bit&7)) != 0) == d {
 		return false
 	}
+
 	shift := byte(1 << byte(bit&7))
+
 	if d {
 		b[pos] |= shift
 	} else {
 		b[pos] &^= shift
 	}
+
 	return true
 }
