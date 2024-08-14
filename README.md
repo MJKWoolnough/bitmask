@@ -2,7 +2,7 @@
 --
     import "vimagination.zapto.org/bitmask"
 
-Package bitmask implements a simple bitmask type
+Package bitmask implements a simple bitmask type.
 
 ## Usage
 
