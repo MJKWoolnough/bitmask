@@ -11,7 +11,7 @@ Package bitmask implements a simple bitmask type.
 
 ## Highlights
 
- - Create artibrary size bit fields.
+ - Create arbitrary size bit fields.
  - Easily get and set bits.
  - Simple method to set bits and determine whether the bit changed.
 
