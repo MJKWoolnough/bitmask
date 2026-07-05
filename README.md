@@ -2,7 +2,6 @@
 
 [![CI](https://github.com/MJKWoolnough/bitmask/actions/workflows/go-checks.yml/badge.svg)](https://github.com/MJKWoolnough/bitmask/actions)
 [![Go Reference](https://pkg.go.dev/badge/vimagination.zapto.org/bitmask.svg)](https://pkg.go.dev/vimagination.zapto.org/bitmask)
-[![Go Report Card](https://goreportcard.com/badge/vimagination.zapto.org/bitmask)](https://goreportcard.com/report/vimagination.zapto.org/bitmask)
 
 --
     import "vimagination.zapto.org/bitmask"
